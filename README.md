@@ -405,5 +405,5 @@ label.titleEdgeInsets = UIEdgeInsetsMake(5, 25, 5, 5);
 ```
 ![](media/15350192148093.jpg)
 
-[Demo地址]
+[Demo地址](https://github.com/KingXcode/HTLabel/blob/master/README.md)
 
