@@ -1,2 +1,2 @@
 # HTLabel
-自定义Label
+三分钟带你实现自定义的UILabel
