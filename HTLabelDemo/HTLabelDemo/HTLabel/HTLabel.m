@@ -27,7 +27,7 @@
         _cornerRadius = 0;
         _titleEdgeInsets = UIEdgeInsetsZero;
         _minFontSize = 0;
-        _contentHorizontalAlignment = HTTextHorizontalAlignmentTop;
+        _contentHorizontalAlignment = HTTextHorizontalAlignmentCenter;
     }
     return self;
 }
@@ -174,7 +174,9 @@
     }
 
     CGRect textRect = CGRectMake(textRectX, textRectY, textRectW, textRectH);
-    
+
+    /// NSParagraphStyleAttributeName 这个属性影响换行，实际上没什么作用
+    [attributedText removeAttribute:NSParagraphStyleAttributeName range:NSMakeRange(0, attributedText.length)];
     [attributedText drawInRect:textRect];
 }
 

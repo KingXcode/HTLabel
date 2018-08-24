@@ -24,9 +24,9 @@
     
     self.view.backgroundColor = [UIColor yellowColor];
     // Do any additional setup after loading the view, typically from a nib.
-    HTLabel *label = [[HTLabel alloc]initWithFrame:CGRectMake(10, 100, 100, 80)];
-    label.numberOfLines = 0;
-    label.text = @"我这是测试我这是测试我这是测试我这是测试";
+    HTLabel *label = [[HTLabel alloc]initWithFrame:CGRectMake(0, 34, 375, 200)];
+    label.numberOfLines = 12;
+    label.text = @"我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试我这是测试";
     label.font = [UIFont systemFontOfSize:30];
     label.textColor = [UIColor yellowColor];
     label.backgroundColor = [UIColor redColor];
@@ -45,7 +45,7 @@
         self.label.adjustsFontSizeToFitWidth = YES;
     }else{
         [UIView animateWithDuration:0.5 animations:^{
-            self.label.frame = CGRectMake(0, 100, 375, 100);
+            self.label.frame = CGRectMake(0, 100, 135, 100);
         }];
     }
 }
