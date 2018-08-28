@@ -261,7 +261,16 @@
     CGRect bounds;
     NSDictionary * parameterDict=[NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
     bounds=[string boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin attributes:parameterDict context:nil];
-    return bounds.size;
+    
+    if (self.numberOfLines <= 0) {
+        return bounds.size;
+    }else{
+        CGFloat height = font.lineHeight * self.numberOfLines;
+        if (bounds.size.height > height) {
+            bounds.size.height = height;
+        }
+        return bounds.size;
+    }
 }
 
 
